@@ -1,4 +1,4 @@
-//variables for colors
+//consts for colors
 const red = document.getElementById("red");
 const redOrange = document.getElementById("redOrange");
 const orange = document.getElementById("orange");
@@ -12,7 +12,7 @@ const bluePurple = document.getElementById("bluePurple");
 const purple = document.getElementById("purple");
 const purpleRed = document.getElementById("purpleRed");
 
-//variables for color names
+//consts for color names
 const Red = document.getElementById("Red");
 const RedOrange = document.getElementById("RedOrange");
 const Orange = document.getElementById("Orange");
@@ -26,7 +26,7 @@ const BluePurple = document.getElementById("BluePurple");
 const Purple = document.getElementById("Purple");
 const PurpleRed = document.getElementById("PurpleRed");
 
-//arrays for color schemes and respective color names
+//objects for color schemes and respective color names
 const monochromaticObj = [
   {main: red,
     text:
@@ -728,7 +728,7 @@ function colorSchemes(id, obj){
   if(obj == monochromaticObj){
       monochromaticObj[index].text.classList.remove("hide");
   
-  //if the color scheme is complementary, find the accent color, a dropshadow to it & unhide the color name
+  //if the color scheme is complementary, find the accent color, add a dropshadow to it & unhide the color name
   }else if(obj == complementaryObj){
       let d = complementaryObj.find(o => o.main == id).accent;
       d.classList.add("dropshadow");
@@ -751,7 +751,7 @@ function colorSchemes(id, obj){
       c.classList.add("dropshadow");
      }
   
-  //iterate through all property value in property text and unhide the color names
+  //iterate through all property values in the text property of the color scheme objects and unhide the color names
       for(let i = 0; i < obj[index].text.length; i++){
       obj[index].text[i].classList.remove("hide");
      }
@@ -759,7 +759,7 @@ function colorSchemes(id, obj){
 };
 
 //call colorScheme based on selected color scheme and 
-function colorWheel(id, num){
+function colorWheel(id){
   //call reset function
   reset();
   
