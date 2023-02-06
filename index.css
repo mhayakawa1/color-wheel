@@ -1,213 +1,314 @@
+/*
+#e60406 red
+#f25206 redOrange
+#f77d00 orange
+#ffb200 orangeYellow
+#ffe208 yellow
+#86bb09 yellowGreen
+#1d9c1b green
+#007473 greenBlue
+#1a51ac blue
+#51369f bluePurple
+#681080 purple
+#9a0058 purpleRed
+*/
+
+html, body{
+  overflow-x: hidden;
+}
+
 body{
-    background: black;
-  }
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+}
   
+#container{
+  width: 100%;
+  margin: 75px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+@media screen and (max-width: 630px){
   #container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0 0 0;
   }
-  
-  @media screen and (max-width: 850px){
-    #container{
-     margin: 0 0 0 15%;
-    }
+}
+
+@media screen and (max-width: 376px){
+  #container{
+    margin: 15px 0 0 0;
   }
-  
-  @media screen and (max-width: 750px){
-    #container{
-      margin: 0; 
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  h1{
-    font-family: 'Fjalla One', sans-serif;
-    color: white;
-    grid-column: 2/3;
-    font-size: 5rem;
-    margin: 150px 0 0 0;
-  }
-  
-  @media screen and (max-width: 850px){
-    h1{
-      margin: 90px 0 0 0;
-    }
-  }
-  
-  @media screen and (max-width: 750px){
-    h1{
-      font-size: 3rem;
-      margin: 250px 0 0 0;
-    }
-  }
-  
+}
+
+#wheel{
+  width: 220px;
+  height: 250px;
+  padding: 150px 0 0 150px;
+}
+
+@media screen and (max-width: 630px){
   #wheel{
-    position: absolute;
-    background-color: none;
-    grid-column: 1/2;
-    justify-self: center;
-    margin: 225px 475px 0 0;
+    height: 220px;
+    position: relative;
+    align-self: center;
+    margin-left: 0;
   }
-  
-  @media screen and (max-width: 850px){
-    #wheel{
-      position: relative;
-      margin: 225px 150px 0 0;
-    }
+}
+
+@media screen and (max-width: 376px){
+  #wheel{
+    padding: 120px 0 0 120px;
+    width: 176px;
+    height: 176px;
+    /*background-color: gray;*/
   }
-  
-  @media screen and (max-width: 750px){
-    #wheel{
-      position: relative;
-      margin: 150px 15% 0 0;
-    }
-  }
-  
+}
+
+.circle{
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-style: none;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 376px){
   .circle{
-    display:block;
-    position:absolute;
-    width: 70px;
-    height: 70px;
-    border-style: none;
-    border-radius: 50%;
-    margin: 20px 0 0 0;
-    transform: 150px;
+    width: 56px;
+    height: 56px;
   }
+}
   
+#red{
+  background-color: #e60406;
+  transform: rotate(270deg) translate(150px);
+}
+  
+#redOrange{
+  background-color: #f25206;
+  transform: rotate(300deg) translate(150px);
+}
+  
+#orange{
+  background-color: #f77d00;
+  transform: rotate(330deg) translate(150px);
+}
+  
+#orangeYellow{
+  background-color: #ffb200;
+  transform: rotate(0deg) translate(150px);
+}
+  
+#yellow{
+  background-color: #ffe208;
+  transform: rotate(30deg) translate(150px);
+}
+  
+#yellowGreen{
+  background-color: #86bb09;
+  transform: rotate(60deg) translate(150px);
+}
+  
+#green{
+  background-color: #1d9c1b;
+  transform: rotate(90deg) translate(150px);
+}
+  
+#greenBlue{
+  background-color: #007473;
+  transform: rotate(120deg) translate(150px);
+}
+  
+#blue{
+  background-color: #1a51ac;
+  transform: rotate(150deg) translate(150px);
+}
+  
+#bluePurple{
+  background-color: #51369f;
+  transform: rotate(180deg) translate(150px);
+}
+  
+#purple{
+  background-color: #681080;
+  transform: rotate(210deg) translate(150px);
+}
+  
+#purpleRed{
+  background-color: #9a0058;
+  transform: rotate(240deg) translate(150px);
+}
+
+@media screen and (max-width: 376px){
   #red{
-    background-color: #FE0000;
-    transform: rotate(270deg) translate(150px);
+    transform: rotate(270deg) translate(120px);
   }
-  
+    
   #redOrange{
-    background-color: #FF6600;
-    transform: rotate(300deg) translate(150px);
+    transform: rotate(300deg) translate(120px);
   }
-  
+    
   #orange{
-    background-color: #FE9900;
-    transform: rotate(330deg) translate(150px);
+    transform: rotate(330deg) translate(120px);
   }
-  
+    
   #orangeYellow{
-    background-color: #FFCC00;
-    transform: rotate(0deg) translate(150px);
+    transform: rotate(0deg) translate(120px);
   }
-  
+    
   #yellow{
-    background-color: #FFFF01;
-    transform: rotate(30deg) translate(150px);
+    transform: rotate(30deg) translate(120px);
   }
-  
+    
   #yellowGreen{
-    background-color: #66CB01;
-    transform: rotate(60deg) translate(150px);
+    transform: rotate(60deg) translate(120px);
   }
-  
+    
   #green{
-    background-color: #009900;
-    transform: rotate(90deg) translate(150px);
+    transform: rotate(90deg) translate(120px);
   }
-  
+    
   #greenBlue{
-    background-color: #00CCCD;
-    transform: rotate(120deg) translate(150px);
+    transform: rotate(120deg) translate(120px);
   }
-  
+    
   #blue{
-    background-color: #0066CB;
-    transform: rotate(150deg) translate(150px);
+    transform: rotate(150deg) translate(120px);
   }
-  
+    
   #bluePurple{
-    background-color: #670099;
-    transform: rotate(180deg) translate(150px);
+    transform: rotate(180deg) translate(120px);
   }
-  
+    
   #purple{
-    background-color: #990099;
-    transform: rotate(210deg) translate(150px);
+    transform: rotate(210deg) translate(120px);
   }
-  
+    
   #purpleRed{
-    background-color: #CD0099;
-    transform: rotate(240deg) translate(150px);
+    transform: rotate(240deg) translate(120px);
   }
+}
   
-  #controls{
-    grid-column: 2/3;
-    justify-self: start;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    margin: 0;
+#container-two{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 100px 0 0 0;
+  width: 405px;
+}
+
+@media screen and (max-width: 768px){
+  #container-two{
+    width: 260px;
   }
-  
-  .dropshadow{
-    animation: pulse 3s infinite;
+}
+
+@media screen and (max-width: 630px){
+  #container-two{
+    padding: 0;
+    align-items: center;
   }
+}
+
+h1{
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 75px;
+  margin: 0 0 0 -3px;
+}
   
-  @keyframes pulse{
-      0% {
-          filter: drop-shadow(0px 0px 5px white);
-      }
-      
-      60% {
-          filter: drop-shadow(0px 0px 15px white);
-      }
-      
-      100% {
-          filter: drop-shadow(0px 0px 5px white);
-      }
+@media screen and (max-width: 768px){
+  h1{
+    font-size: 50px;
+    margin: 0 0 0 -2px;
   }
+}
+
+#controls{
+  display: flex;
+  gap: 5px;
+}
   
+#dropdown{
+  width: 180px;
+  height: 40px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: medium;
+}
+  
+button{
+  width: 100px;
+  height: 40px;
+  font-size: 30px;
+  font-family: 'Fjalla One', sans-serif;
+}
+  
+@media screen and (max-width: 768px){
   #dropdown{
-    width: 150px;
-    font-family: 'Fjalla One', sans-serif;
+    width: 135px;
+    height: 30px;
+    font-size: 10px;
   }
-  
+
   button{
-    width: 100px;
-    height: 35px;
-    font-size: 25px;
-    font-family: 'Fjalla One', sans-serif;
+    width: 75px;
+    height: 30px;
+    font-size: 15px;
   }
+}
   
-  @media screen and (max-width: 750px){
-    button{
-      width: 85px;
-      height: 25px;
-      font-size: 15px;
-    }
-    #dropdown{
-      height: 25px;
-      font-size: 10px;
-    }
+.dropshadow{
+  animation: pulse 3s infinite;
+}
+  
+@keyframes pulse{
+  0% {
+    filter: drop-shadow(0px 0px 5px white);
   }
-  
-  .hide{
-    display: none;
+      
+  60% {
+    filter: drop-shadow(0px 0px 15px white);
   }
+      
+  100% {
+    filter: drop-shadow(0px 0px 5px white);
+  }
+}
+
+.hide{
+  display: none;
+}
   
+@media screen and(max-width: 750px){
   #colors{
-    grid-column: 2/3;
-    margin: 0;
+    position: absolute;
+    margin: 100px 0 0 0;
   }
+}
+
+ul{
+  list-style-position: inside;
+  padding-left: 0;
+}
   
-  @media screen and(max-width: 750px){
-    #colors{
-      position: absolute;
-      margin: 100px 0 0 0;
-    }
-  }
-  
-  .colorname{
-    color: white;
-    font-family: 'Fjalla One', sans-serif;
-    margin: 10px 0 0 0;
-    opacity: 0.5;
-  }
+.colorName{
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: medium;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+  opacity: 0.5;
+}
