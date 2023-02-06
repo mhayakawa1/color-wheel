@@ -5,68 +5,56 @@
     <link rel="stylesheet" href="index.css">  
 </head>
 
-<!--
-#FE0000 red
-#FF6600 redOrange
-#FE9900 orange
-#FFCC00 orangeYellow
-#FFFF01 yellow
-#66CB01 yellowGreen
-#009900 green
-#00CCCD greenBlue
-#0066CB blue
-#670099 bluePurple
-#990099 purple
-#CD0099 purpleRed
--->
-
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-
 
 <div id="container">
   
-<div id="wheel">
-<div id="red" class="circle" onclick="colorWheel(red)"></div>
-<div id="redOrange" class="circle" onclick="colorWheel(redOrange)"></div>
-<div id="orange" class="circle" onclick="colorWheel(orange)"></div>
-<div id="orangeYellow" class="circle" onclick="colorWheel(orangeYellow)"></div>
-<div id="yellow" class="circle" onclick="colorWheel(yellow)"></div>
-<div id="yellowGreen" class="circle" onclick="colorWheel(yellowGreen)"></div>
-<div id="green" class="circle" onclick="colorWheel(green)"></div>
-<div id="greenBlue" class="circle" onclick="colorWheel(greenBlue)"></div>
-<div id="blue" class="circle" onclick="colorWheel(blue)"></div>
-<div id="bluePurple" class="circle" onclick="colorWheel(bluePurple)"></div>
-<div id="purple" class="circle" onclick="colorWheel(purple)"></div>
-<div id="purpleRed" class="circle" onclick="colorWheel(purpleRed)"></div>
-  </div>
-<h1>COLOR WHEEL</h1>
-<div id="controls">
-  <select id="dropdown">
-    <option>Monochromatic</option>
-    <option>Complementary</option>
-    <option>Analogous</option>
-    <option>Split-Complementary</option>
-    <option>Triadic</option>
-    <option>Tetradic</option>
-  </select>
-  <button onclick="reset()">RESET</button>
+  <div id="wheel">
+    <div id="red" class="circle" onclick="colorWheel(red, Red)"></div>
+    <div id="redOrange" class="circle" onclick="colorWheel(redOrange, RedOrange)"></div>
+    <div id="orange" class="circle" onclick="colorWheel(orange, Orange)"></div>
+    <div id="orangeYellow" class="circle" onclick="colorWheel(orangeYellow, OrangeYellow)"></div>
+    <div id="yellow" class="circle" onclick="colorWheel(yellow, Yellow)"></div>
+    <div id="yellowGreen" class="circle" onclick="colorWheel(yellowGreen, YellowGreen)"></div>
+    <div id="green" class="circle" onclick="colorWheel(green, Green)"></div>
+    <div id="greenBlue" class="circle" onclick="colorWheel(greenBlue, GreenBlue)"></div>
+    <div id="blue" class="circle" onclick="colorWheel(blue, Blue)"></div>
+    <div id="bluePurple" class="circle" onclick="colorWheel(bluePurple, BluePurple)"></div>
+    <div id="purple" class="circle" onclick="colorWheel(purple, Purple)"></div>
+    <div id="purpleRed" class="circle" onclick="colorWheel(purpleRed, PurpleRed)"></div>
   </div>
 
-
-  <div id="colors">
-    <!--<p id="colors"><p>-->
-    <p class="hide colorname" id="Red">∘ Red</p>
-    <p class="hide colorname" id="RedOrange">∘ Red-Orange</p>
-    <p class="hide colorname" id="Orange">∘ Orange</p>
-    <p class="hide colorname" id="OrangeYellow">∘ Orange-Yellow</p>
-    <p class="hide colorname" id="Yellow">∘ Yellow</p>
-    <p class="hide colorname" id="YellowGreen">∘ Yellow-Green</p>
-    <p class="hide colorname" id="Green">∘ Green</p>
-    <p class="hide colorname" id="GreenBlue">∘ Green-Blue</p>
-    <p class="hide colorname" id="Blue">∘ Blue</p>
-    <p class="hide colorname" id="BluePurple">∘ Blue-Purple</p>
-    <p class="hide colorname" id="Purple">∘ Purple</p>
-    <p class="hide colorname" id="PurpleRed">∘ Purple-Red</p>
+  <div id="container-two">
+    <h1>COLOR WHEEL</h1>
+    <div id="controls">
+      <select id="dropdown">
+        <option>Monochromatic</option>
+        <option>Complementary</option>
+        <option>Analogous</option>
+        <option>Split-Complementary</option>
+        <option>Triadic</option>
+        <option>Tetradic</option>
+      </select>
+      <button onclick="reset()">RESET</button>
+    </div>  
+    
+    <div id="colors">
+      <ul>
+        <li class="hide colorName" id="Red">Red #e60406</li>
+        <li class="hide colorName" id="RedOrange">Red-Orange #f25206</li>
+        <li class="hide colorName" id="Orange">Orange #f77d00</li>
+        <li class="hide colorName" id="OrangeYellow">Orange-Yellow #ffb200</li>
+        <li class="hide colorName" id="Yellow">Yellow #ffe208</li>
+        <li class="hide colorName" id="YellowGreen">Yellow-Green #86bb09</li>
+        <li class="hide colorName" id="Green">Green #1d9c1b</li>
+        <li class="hide colorName" id="GreenBlue">Green-Blue #007473</li>
+        <li class="hide colorName" id="Blue">Blue #1a51ac</li>
+        <li class="hide colorName" id="BluePurple">Blue-Purple #51369f</li>
+        <li class="hide colorName" id="Purple">Purple #681080</li>
+        <li class="hide colorName" id="PurpleRed">Purple-Red #9a0058</li>
+      </ul>
+    </div>
   </div>
 </div>
 
